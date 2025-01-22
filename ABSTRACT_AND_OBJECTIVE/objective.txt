@@ -1,0 +1,11 @@
+OBJECTIVES 
+-> Automate workflows for student enrolment, lab changes, training scheduling, and
+ 	attendance tracking.
+-> Provide a centralized portal with dashboards for students, faculty, and administrators.
+-> Enable robust notifications, communications, and reporting capabilities.
+-> Create an interactive forum for discussions on technological news, idea sharing, and
+ 	doubt clearance among special lab members and industry partners
+-> User Roles and Permissions  for student, faculty, admin, Industry partner
+-> Modules - Lab Selection, Interview Scheduling,  Completion ,  Interview Process.
+->  Training and Attendance Process -   Training Scheduling, Attendance Management, Completion
+-> Event Registration Process - Event Listings(Description, eligibility criteria, rewards), Eligibility Check(PSskill level, Placement FA and Academic FA,      	Academic standing (no arrears)), Rewards
