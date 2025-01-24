@@ -1,0 +1,5 @@
+I focused on creating entity-relationship (ER) diagrams to visualize the database structure. The 
+diagrams covered critical tables like user roles, event registrations, and forum posts. After 
+finalizing the schema, I discussed potential improvements with the team to ensure seamless 
+integration with the backend. I also began drafting SQL scripts for initial table creation, 
+committing all progress to the Git repository for team collaboration. 
