@@ -1,0 +1,12 @@
+This week's work revolved around crafting visually appealing and user-centered designs for the login page, student dashboard, faculty dashboard, and admin dashboard. Each design was carefully tailored to meet the project's requirements, ensuring a seamless and intuitive user experience across all interfaces. The designs prioritized accessibility, responsiveness, and aesthetic consistency, making them suitable for various devices and user scenarios.
+
+    -Delivered finalized designs for all major interfaces, emphasizing user engagement through responsiveness and accessibility.
+
+    -Completed the style guide, which defined the visual standards for the project, including colors, typography, button styles, and icons, ensuring a 
+     cohesive design language throughout.
+
+    -Uploaded detailed screenshots and images of Figma designs to GitHub, allowing team members to reference and utilize them during development.
+    
+    -Focused on creating interactive and practical layouts, ensuring they reflected real-world use cases and aligned with the user journey.
+
+The designs reflect attention to detail and a commitment to excellence, covering both functional and aesthetic aspects. By ensuring uniformity in design and incorporating accessibility principles, the user interface is positioned to offer an engaging experience for all users. These comprehensive designs will serve as the foundation for the development team's implementation phase.
