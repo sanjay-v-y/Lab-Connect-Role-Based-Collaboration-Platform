@@ -1,1 +1,5 @@
-Week 4 work log will be updated soon
+I finalized the backend architecture, outlining API endpoints for core functionalities such as user
+authentication, role-based access, and forum interaction. The backend framework was
+initialized, and I implemented basic user authentication with token-based security. Furthermore,
+I created a backend flow diagram that connected database queries with API requests to
+visualize the overall process. The initial commits were pushed to Git for review.
