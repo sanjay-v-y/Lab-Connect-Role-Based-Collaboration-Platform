@@ -1,0 +1,5 @@
+I completed the design of the database schema, including tables for user profiles, attendance 
+tracking, and forum interactions. I also implemented relationships between tables to ensure 
+seamless data retrieval for APIs. Additionally, I worked on creating stored procedures for tasks 
+like verifying event eligibility and calculating participation points. These developments were 
+tested and pushed to Git for integration with backend modules. 
