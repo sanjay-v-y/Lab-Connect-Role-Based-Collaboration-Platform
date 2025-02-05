@@ -6,14 +6,14 @@ import IndustryPersonDashboard from "./assets/Pages/IndustryPerson/Dashboard";
 import Login from "./assets/Pages/Auth/Login";
 
 function Home() {
-  return <h1>Yare Yare daze :|</h1>;
+  return <h1>Golden Wind!</h1>;
 }
 
 function App() {
   return (
     <Router>
       <div>
-        <h1>Jotaro Kujo</h1>
+        <h1>Gioronno GIovanni</h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
