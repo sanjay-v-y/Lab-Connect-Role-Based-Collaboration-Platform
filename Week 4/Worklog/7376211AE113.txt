@@ -4,7 +4,7 @@ During the fourth week, I focused on integrating the frontend with the backend A
 
     ->Worked on ensuring a smooth flow between UI elements and API responses to enhance usability and functionality.
 
-    ->Collaborated with the backend team to debug minor issues related to data formatting and API responses.\
+    ->Collaborated with the backend team to debug minor issues related to data formatting and API responses.
 
     ->Optimized state management techniques to efficiently handle API data, reducing unnecessary re-renders and improving performance.
 
