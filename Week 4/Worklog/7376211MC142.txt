@@ -1,0 +1,6 @@
+During this week, I collaborated with the backend and database teams to ensure the designs
+were aligned with the backend architecture and database schema. I worked on interaction
+prototypes for features such as lab registration, event tracking, and forum discussions. These
+prototypes focused on creating a user-friendly flow that simplifies the complexity of backend
+operations. I also provided support to the frontend team by clarifying design intents for API
+integrations

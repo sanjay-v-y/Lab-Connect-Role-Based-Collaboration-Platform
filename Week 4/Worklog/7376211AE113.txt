@@ -1,11 +1,11 @@
 During the fourth week, I focused on integrating the frontend with the backend APIs, starting with user authentication and login functionalities. This involved handling API requests and responses efficiently while ensuring a seamless user experience.
 
-->Implemented dynamic components for the dashboard that fetch and display real-time data, improving responsiveness and interactivity.
+    ->Implemented dynamic components for the dashboard that fetch and display real-time data, improving responsiveness and interactivity.
 
-->Worked on ensuring a smooth flow between UI elements and API responses to enhance usability and functionality.
+    ->Worked on ensuring a smooth flow between UI elements and API responses to enhance usability and functionality.
 
-->Collaborated with the backend team to debug minor issues related to data formatting and API responses.\
+    ->Collaborated with the backend team to debug minor issues related to data formatting and API responses.\
 
-->Optimized state management techniques to efficiently handle API data, reducing unnecessary re-renders and improving performance.
+    ->Optimized state management techniques to efficiently handle API data, reducing unnecessary re-renders and improving performance.
 
 This week was crucial in laying the foundation for a fully functional and interactive frontend integrated with backend services. The focus was on refining the communication between frontend and backend, resolving data inconsistencies, and enhancing the overall user experience through dynamic and efficient data handling.
