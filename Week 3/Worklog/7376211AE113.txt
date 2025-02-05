@@ -1,0 +1,17 @@
+During Week 3, significant progress was made in both frontend setup and UI design to lay a strong foundation for the project. Below are the details of the tasks accomplished:
+
+1. Frontend Setup and Login Implementation:-
+    The frontend framework was successfully set up using React.js, chosen for its flexibility, component-based structure, and efficient state management. The development of the login screen was a priority during this phase.
+
+    ->Created the login screen as a standalone, reusable component.
+    ->Implemented functionality and tested the screen using dummy data to ensure smooth user authentication flow.
+    ->Focused on making the design responsive for compatibility with multiple devices.
+
+2. UI Design and Style Integration:
+    To ensure a seamless and consistent user experience, emphasis was placed on the creation of intuitive dashboard designs and the integration of style guidelines
+
+    ->Designed dashboard interfaces for students, faculty, and admins using Figma, prioritizing user-friendliness and organized layouts.
+    ->Integrated the project's style guide into the UI components to ensure uniformity across the application.
+    ->Fine-tuned visual elements like buttons, typography, and color palettes to align with the overall design theme.
+
+This week's work focused on establishing a cohesive design system and creating a functional framework, paving the way for further development and implementation in upcoming weeks.

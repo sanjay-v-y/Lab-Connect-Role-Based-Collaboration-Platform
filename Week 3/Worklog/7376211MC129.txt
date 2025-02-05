@@ -1,0 +1,5 @@
+Ravivarma (Backend Development)
+I provided feedback on UI/UX wireframes to ensure they were technically feasible from a
+backend perspective. Additionally, I updated DFDs based on finalized wireframes, focusing on
+how data would flow through the system. I explored backend frameworks, such as Flask and
+Django, and began setting up an initial project environment to prepare for API development.

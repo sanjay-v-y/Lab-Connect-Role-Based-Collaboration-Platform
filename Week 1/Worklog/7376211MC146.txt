@@ -1,0 +1,7 @@
+I focused on outlining the database requirements for the project and brainstorming ideas for the 
+initial schema design. After understanding the project’s objectives, I explored cloud database 
+options, assessing their scalability and compatibility with the project’s needs. I also contributed 
+to organizing the repository structure for database-related scripts and tools, ensuring it adhered 
+to best practices. These initial steps formed the basis for the database and API management 
+strategy. 
+
