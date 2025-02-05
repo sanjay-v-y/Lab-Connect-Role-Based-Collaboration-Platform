@@ -1,1 +1,0 @@
-This folder contains about the project 
