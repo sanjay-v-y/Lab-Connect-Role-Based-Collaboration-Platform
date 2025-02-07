@@ -1,0 +1,11 @@
+.layout {
+    display: flex; /* Use flexbox */
+    height: 100vh; /* Full viewport height */
+}
+
+.content {
+    flex-grow: 1; /* Takes remaining space */
+    margin-left: 250px; /* Push content to the right */
+    padding: 20px;
+    overflow-x: hidden;
+}
