@@ -8,7 +8,7 @@
     top: 0;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column; 
 }
 
 .sidebar h2 {

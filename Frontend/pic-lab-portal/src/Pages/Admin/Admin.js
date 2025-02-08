@@ -6,23 +6,7 @@ import '../../Components/assets/admin.css'; // Import styles for the whole page
 
 const Admin = () => {
   return (
-<div className="admin-container">
-      {/* Sidebar */}
-      <aside className="sidebar">
-        <div className="logo">PIC Portal</div>
-        <nav>
-          <ul>
-            <li>Dashboard</li>
-            <li>Manage Labs</li>
-            <li>Manage Users</li>
-            <li>Events</li>
-            <li>Forum</li>
-            <li>Reports</li>
-            <li>Settings</li>
-          </ul>
-        </nav>
-      </aside>
-
+    <div className="admin-container">
       {/* Main Content */}
       <main className="main-content">
         <header className="admin-header">

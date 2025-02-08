@@ -4,7 +4,6 @@ import Home from './Pages/Home.js';
 import Admin from './Pages/Admin/Admin.js';
 import Labs from './Pages/Labs.js';
 import User from './Pages/User.js';
-
 import Layout from './Components/layout.js'; // Import Layout
 
 function App() {
@@ -14,8 +13,8 @@ function App() {
         {/* Home Page without Sidebar */}
         <Route path="/" element={<Home />} />
         
-        {/* Group routes that need the Sidebar */}
-        <Route path="/" element={<Layout />}>
+        {/* Routes that use Layout (which includes Sidebar) */}
+        <Route element={<Layout />}>
           <Route path="/admin" element={<Admin />} />
           <Route path="/labs" element={<Labs />} />
           <Route path="/user" element={<User />} />
