@@ -1,14 +1,20 @@
-import React, { useState } from "react";
-import { fetchLabs, addLab, modifyLab, deleteLab } from "../API.js";
-import "../Components/assets/labs.css"; // Import styles
+import React, { useState, useEffect } from "react";
+import { fetchLabs, addLab, modifyLab, deleteLab, fetchStudents } from "../API.js";
+import "../Components/assets/labs.css";
 
 const Labs = () => {
   const [labs, setLabs] = useState([]);
+  const [selectedLab, setSelectedLab] = useState(null);
+  const [students, setStudents] = useState([]);
   const [showForm, setShowForm] = useState(false);
-  const [labForm, setLabForm] = useState({ id: "", name: "", incharge: "", students: "" });
+  const [labForm, setLabForm] = useState({ id: "", name: "", description: "", photoUrl: "", faculty: "", students: [] });
   const [editLabId, setEditLabId] = useState(null);
 
-  // Fetch labs data
+  // Load labs on component mount
+  useEffect(() => {
+    loadLabs();
+  }, []);
+
   const loadLabs = async () => {
     try {
       const data = await fetchLabs();
@@ -18,20 +24,33 @@ const Labs = () => {
     }
   };
 
-  // Handle input changes in the form
+  const loadStudents = async (labId) => {
+    try {
+      const data = await fetchStudents(labId);
+      setStudents(data);
+    } catch (error) {
+      console.error("Failed to load students", error);
+    }
+  };
+
   const handleChange = (e) => {
     setLabForm({ ...labForm, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission for adding or modifying a lab
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const formattedLab = {
+        ...labForm,
+        faculty: labForm.faculty.trim() === "" ? null : Number(labForm.faculty)
+      };
+  
       if (editLabId) {
-        await modifyLab(editLabId, labForm);
+        await modifyLab(editLabId, formattedLab);
       } else {
-        await addLab(labForm);
+        await addLab(formattedLab);
       }
+  
       setShowForm(false);
       setEditLabId(null);
       loadLabs();
@@ -39,8 +58,8 @@ const Labs = () => {
       console.error("Error saving lab", error);
     }
   };
+      
 
-  // Handle deleting a lab
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this lab?")) {
       try {
@@ -52,18 +71,21 @@ const Labs = () => {
     }
   };
 
-  // Open the add lab form
   const openAddForm = () => {
-    setLabForm({ id: "", name: "", incharge: "", students: "" });
+    setLabForm({ id: "", name: "", description: "", photoUrl: "", faculty: "", students: [] });
     setEditLabId(null);
     setShowForm(true);
   };
 
-  // Open the modify form
   const openModifyForm = (lab) => {
     setLabForm(lab);
     setEditLabId(lab.id);
     setShowForm(true);
+  };
+
+  const openLabDetails = (lab) => {
+    setSelectedLab(lab);
+    setStudents([]);
   };
 
   return (
@@ -77,38 +99,84 @@ const Labs = () => {
         <form className="lab-form" onSubmit={handleSubmit}>
           <input type="text" name="id" value={labForm.id} onChange={handleChange} placeholder="Lab ID" required />
           <input type="text" name="name" value={labForm.name} onChange={handleChange} placeholder="Lab Name" required />
-          <input type="text" name="incharge" value={labForm.incharge} onChange={handleChange} placeholder="Incharge" required />
-          <input type="number" name="students" value={labForm.students} onChange={handleChange} placeholder="No. of Students" required />
+          <input type="text" name="description" value={labForm.description} onChange={handleChange} placeholder="Description" required />
+          <input type="text" name="photoUrl" value={labForm.photoUrl} onChange={handleChange} placeholder="Photo URL" />
+          <input type="text" name="faculty" value={labForm.faculty} onChange={handleChange} placeholder="Faculty" />
           <button type="submit">{editLabId ? "Modify Lab" : "Add Lab"}</button>
           <button type="button" onClick={() => setShowForm(false)}>Cancel</button>
         </form>
       )}
 
-      <table className="labs-table">
-        <thead>
-          <tr>
-            <th>Lab ID</th>
-            <th>Lab Name</th>
-            <th>Incharge</th>
-            <th>No. of Students</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {labs.map((lab) => (
-            <tr key={lab.id}>
-              <td>{lab.id}</td>
-              <td>{lab.name}</td>
-              <td>{lab.incharge}</td>
-              <td>{lab.students}</td>
-              <td>
-              <button type="button" onClick={() => openModifyForm(lab)}>Modify</button>
-              <button type="button" onClick={() => handleDelete(lab.id)}>Delete</button>
-              </td>
+      {!selectedLab ? (
+        <table className="labs-table">
+          <thead>
+            <tr>
+              <th>Lab ID</th>
+              <th>Lab Name</th>
+              <th>Description</th>
+              <th>Faculty</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+  {labs.map((lab) => (
+    <tr
+      key={lab.id}
+      onClick={() => openLabDetails(lab)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          openLabDetails(lab);
+        }
+      }}
+      tabIndex="0" // Makes the row focusable
+      // biome-ignore lint/a11y/useSemanticElements: <explanation>
+      role="button" // Improves accessibility by making it behave like a button
+    >
+      <td>{lab.id}</td>
+      <td>{lab.name}</td>
+      <td>{lab.description}</td>
+      <td>{lab.faculty || "N/A"}</td>
+      <td>
+        <button type="button" onClick={(e) => { e.stopPropagation(); openModifyForm(lab); }}>Edit</button>
+        <button type= "button" onClick={(e) => { e.stopPropagation(); handleDelete(lab.id); }}>Delete</button>
+      </td>
+    </tr>
+  ))}
+</tbody>
+
+        </table>
+      ) : (
+        <div className="lab-details">
+          <h2>Lab Details</h2>
+          <p><strong>ID:</strong> {selectedLab.id}</p>
+          <p><strong>Name:</strong> {selectedLab.name}</p>
+          <p><strong>Description:</strong> {selectedLab.description}</p>
+          <p><strong>Faculty:</strong> {selectedLab.faculty || "N/A"}</p>
+          <button type = "button" onClick={() => loadStudents(selectedLab.id)}>View Students</button>
+          <button type ='button' onClick={() => setSelectedLab(null)}>Back</button>
+
+          {students.length > 0 && (
+            <table className="students-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                {students.map((student) => (
+                  <tr key={student.id}>
+                    <td>{student.id}</td>
+                    <td>{student.name}</td>
+                    <td>{student.email}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
+      )}
     </div>
   );
 };

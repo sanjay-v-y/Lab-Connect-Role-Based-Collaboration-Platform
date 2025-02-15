@@ -1,0 +1,32 @@
+{
+  "labs": [
+    {
+      "id": "1",
+      "name": "AI Lab",
+      "description": "Machine Learning and AI",
+      "photoUrl": "ai_lab.jpg",
+      "faculty": "Dr. Smith",
+      "students": [
+        {
+          "id": 101,
+          "name": "Alice",
+          "email": "alice@example.com"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Cyber security",
+      "description": "Network and Security",
+      "photoUrl": "cyber",
+      "faculty": "Prof. Johnson",
+      "students": [
+        {
+          "id": 102,
+          "name": "Bob",
+          "email": "bob@example.com"
+        }
+      ]
+    }
+  ]
+}

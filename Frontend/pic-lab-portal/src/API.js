@@ -1,58 +1,57 @@
-const API_URL = "https://0f51-122-164-87-197.ngrok-free.app/pic/labs/summa"; // Replace with your Ngrok URL
+const BASE_URL = "https://fd56-122-164-83-59.ngrok-free.app/pic/labs"; // Update with actual ngrok URL
 
-// Fetch labs data
-// Fetch labs data
+const defaultHeaders = {
+  "Content-Type": "application/json",
+  "ngrok-skip-browser-warning": "true", // Fix for ngrok browser redirect issue
+};
+
+// Fetch all labs
 export const fetchLabs = async () => {
   try {
-    const response = await fetch(`${API_URL}`, {
-      method: 'GET',
+    const response = await fetch(`${BASE_URL}/get`, {
+      headers: defaultHeaders,
     });
 
-    console.log('Response Status:', response.status);
-    console.log('Response Headers:', response.headers);
-
     if (!response.ok) {
-      throw new Error(`Network response was not ok. Status: ${response.status}`);
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    const contentType = response.headers.get("Content-Type");
-    console.log('Response Content-Type:', contentType);
-
-    // Use optional chaining to check for null or undefined contentType
-    if (contentType?.includes("application/json")) {
-      return await response.json();
-    }
-
-    // Fallback to text if the server sends plain text
-    if (contentType?.includes("text/plain")) {
-      return await response.text();
-    }
-
-    // If response is neither JSON nor plain text, throw an error
-    throw new Error(`Unexpected response type: ${contentType}`);
-
+    return await response.json();
   } catch (error) {
     console.error("Error fetching labs:", error);
     throw error;
   }
 };
 
+// Fetch students in a lab
+export const fetchStudents = async (labId) => {
+  try {
+    const response = await fetch(`${BASE_URL}/get/${labId}`, {
+      headers: defaultHeaders,
+    });
 
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
 
+    return await response.json();
+  } catch (error) {
+    console.error(`Error fetching students for lab ${labId}:`, error);
+    throw error;
+  }
+};
 
-// Add new lab
+// Add a new lab
 export const addLab = async (labData) => {
   try {
-    const response = await fetch(`${API_URL}`, {
+    const response = await fetch(`${BASE_URL}/add`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: defaultHeaders,
       body: JSON.stringify(labData),
     });
 
     if (!response.ok) {
-      throw new Error("Failed to add lab");
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     return await response.json();
@@ -62,24 +61,22 @@ export const addLab = async (labData) => {
   }
 };
 
-// Modify existing lab
-export const modifyLab = async (labId, updatedData) => {
+// Modify an existing lab
+export const modifyLab = async (labId, updatedLabData) => {
   try {
-    const response = await fetch(`${API_URL}/labs/${labId}`, {
+    const response = await fetch(`${BASE_URL}/modify/${labId}`, {
       method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updatedData),
+      headers: defaultHeaders,
+      body: JSON.stringify(updatedLabData),
     });
 
     if (!response.ok) {
-      throw new Error("Failed to modify lab");
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     return await response.json();
   } catch (error) {
-    console.error("Error modifying lab:", error);
+    console.error(`Error modifying lab ${labId}:`, error);
     throw error;
   }
 };
@@ -87,17 +84,18 @@ export const modifyLab = async (labId, updatedData) => {
 // Delete a lab
 export const deleteLab = async (labId) => {
   try {
-    const response = await fetch(`${API_URL}/labs/${labId}`, {
+    const response = await fetch(`${BASE_URL}/delete/${labId}`, {
       method: "DELETE",
+      headers: defaultHeaders,
     });
 
     if (!response.ok) {
-      throw new Error("Failed to delete lab");
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     return await response.json();
   } catch (error) {
-    console.error("Error deleting lab:", error);
+    console.error(`Error deleting lab ${labId}:`, error);
     throw error;
   }
 };
