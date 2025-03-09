@@ -1,8 +1,6 @@
-import React from 'react';
 import { FaUsers, FaFlask, FaCalendarCheck, FaQuestionCircle } from "react-icons/fa";
 import { IoMdNotificationsOutline } from "react-icons/io";
-
-import '../../Components/assets/admin.css'; // Import styles for the whole page
+import "../../Components/assets/admin.css"; // Import styles for the whole page
 
 const Admin = () => {
   return (

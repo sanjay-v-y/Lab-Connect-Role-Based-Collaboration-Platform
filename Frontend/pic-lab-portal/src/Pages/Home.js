@@ -1,17 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link, useNavigate } from 'react-router-dom';
+import '../Components/assets/home.css'; // Ensure you have styling for better UI
 
-const Home = () => {
+const Home = ({ setRole }) => {
+  const navigate = useNavigate();
+
+  const handleGoogleSignIn = () => {
+    navigate("/login");
+  };
+
   return (
-    <div>
-      <h1>Welcome to PIC Portal</h1>
-      <p>Register and manage labs with ease.</p>
-      
+    <div className="home-container">
+      <div className="home-card"> {/* Added specificity */}
+        <h1 className="home-title">Welcome to PIC Portal</h1>
+        <p className="home-description">Register and manage labs with ease.</p>
+        <button type="button" onClick={handleGoogleSignIn} className="google-signin-btn">
+          Sign in with Google
+        </button>
+      </div>
+
       {/* Navigation Links */}
-      <nav>
-        <Link to="/admin">Go to Admin</Link> <br />
-        <Link to="/labs">Go to Labs</Link> <br />
-        <Link to="/user">Go to User</Link>
+      <nav className="home-nav"> {/* Added class for better targeting */}
+        <Link to="/admin" className="home-link">Go to Admin</Link> <br />
+        <Link to="/labs" className="home-link">Go to Labs</Link> <br />
+        <Link to="/user" className="home-link">Go to User</Link>
       </nav>
     </div>
   );

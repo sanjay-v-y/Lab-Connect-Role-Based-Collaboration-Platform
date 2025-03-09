@@ -1,46 +1,93 @@
 .labs-container {
     padding: 20px;
-  }
+}
   
-  .top-buttons {
+.top-buttons {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
-  }
+}
   
-  button {
+button {
     padding: 10px 15px;
     background: #47739f;
     color: white;
     border: none;
     cursor: pointer;
     transition: 0.3s;
-  }
+}
   
-  button:hover {
+button:hover {
     background: #345678;
-  }
+}
+
+.btn{
+    background: #47739f;
+}
   
-  .lab-form {
+.lab-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     max-width: 400px;
-  }
+}
   
-  .labs-table {
+.labs-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-  }
+}
   
-  .labs-table th, .labs-table td {
+.labs-table th, .labs-table td {
     border: 1px solid #ddd;
     padding: 10px;
-  }
+}
   
-  .labs-table th {
+.labs-table th {
     background: #47739f;
     color: white;
-  }
+}
+
+.faculty-dropdown-container {
+    position: relative;
+    width: 100%;
+}
+  
+.faculty-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+  
+.faculty-dropdown li {
+    padding: 8px;
+    cursor: pointer;
+    list-style: none;
+    border: none; /* Remove any button-style border */
+    background: none; /* Remove any background color */
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.faculty-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+.faculty-dropdown li button {
+    all: unset; /* Reset all button styles */
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    text-align: left;
+    padding: 8px;
+}
+
+  
   

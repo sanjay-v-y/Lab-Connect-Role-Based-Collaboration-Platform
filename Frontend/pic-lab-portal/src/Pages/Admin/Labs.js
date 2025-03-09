@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { fetchLabs, addLab, modifyLab, deleteLab, fetchStudents } from "../API.js";
-import "../Components/assets/labs.css";
+import { fetchLabs, addLab, modifyLab, deleteLab, fetchStudents, fetchUnassignedFaculties} from "./API.js";
+import "../../Components/assets/labs.css";
 
 const Labs = () => {
   const [labs, setLabs] = useState([]);
   const [selectedLab, setSelectedLab] = useState(null);
   const [students, setStudents] = useState([]);
+  const [faculties, setFaculties] = useState([]); // Store faculty list
+  const [facultyDropdownVisible, setFacultyDropdownVisible] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [labForm, setLabForm] = useState({ id: "", name: "", description: "", photoUrl: "", faculty: "", students: [] });
   const [editLabId, setEditLabId] = useState(null);
+  
 
   // Load labs on component mount
   useEffect(() => {
@@ -33,6 +36,16 @@ const Labs = () => {
     }
   };
 
+  const loadFaculties = async () => {
+    try {
+      const data = await fetchUnassignedFaculties();
+      setFaculties([{ id: null, name: "N/A" }, ...data]);
+    } catch (error) {
+      console.error("Failed to load faculties", error);
+    }
+  };
+  
+
   const handleChange = (e) => {
     setLabForm({ ...labForm, [e.target.name]: e.target.value });
   };
@@ -42,7 +55,7 @@ const Labs = () => {
     try {
       const formattedLab = {
         ...labForm,
-        faculty: labForm.faculty.trim() === "" ? null : Number(labForm.faculty)
+        faculty: labForm.faculty ? { id: labForm.faculty } : null, // Wrap faculty ID inside an object
       };
   
       if (editLabId) {
@@ -91,8 +104,8 @@ const Labs = () => {
   return (
     <div className="labs-container">
       <div className="top-buttons">
-        <button type="button" onClick={openAddForm}>Add Lab</button>
-        <button type="button" onClick={loadLabs}>View Labs</button>
+        <button className="btn" type="button" onClick={openAddForm}>Add Lab</button>
+        <button className="btn" type="button" onClick={loadLabs}>View Labs</button>
       </div>
 
       {showForm && (
@@ -101,7 +114,45 @@ const Labs = () => {
           <input type="text" name="name" value={labForm.name} onChange={handleChange} placeholder="Lab Name" required />
           <input type="text" name="description" value={labForm.description} onChange={handleChange} placeholder="Description" required />
           <input type="text" name="photoUrl" value={labForm.photoUrl} onChange={handleChange} placeholder="Photo URL" />
-          <input type="text" name="faculty" value={labForm.faculty} onChange={handleChange} placeholder="Faculty" />
+          
+          <div className="faculty-dropdown-container">
+              <input
+              type="text"
+              name="faculty"
+              value={faculties.find(f => f.id === labForm.faculty)?.name || "N/A"}
+              placeholder="Select Faculty"
+              onFocus={() => {
+                loadFaculties();
+                setFacultyDropdownVisible(true);
+              }}
+              readOnly
+            />
+
+            {facultyDropdownVisible && (
+              <ul className="faculty-dropdown">
+                {faculties.map((faculty) => (
+                  <li key={faculty.id}>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setLabForm({ ...labForm, faculty: faculty.id });
+                        setFacultyDropdownVisible(false);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          setLabForm({ ...labForm, faculty: faculty.id });
+                          setFacultyDropdownVisible(false);
+                        }
+                      }}
+                    >
+                      {faculty.name}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
           <button type="submit">{editLabId ? "Modify Lab" : "Add Lab"}</button>
           <button type="button" onClick={() => setShowForm(false)}>Cancel</button>
         </form>

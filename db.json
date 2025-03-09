@@ -1,0 +1,80 @@
+{
+  "students": [
+    {
+      "id": "7",
+      "name": "Ravi",
+      "email": "ravi@example.com",
+      "lab": {
+        "id": 2,
+        "name": "Robotics Lab",
+        "description": "Advanced Robotics Research",
+        "faculty": "Dr. Jane Smith"
+      },
+      "preferredLabs": [
+        2,
+        3,
+        4,
+        13,
+        12
+      ],
+      "eligibleForLab": true,
+      "status": "APPROVED"
+    },
+    {
+      "id": "8",
+      "name": "Sanju",
+      "email": "sanjay@example.com",
+      "lab": {
+        "id": 2,
+        "name": "Robotics Lab",
+        "description": "Advanced Robotics Research",
+        "faculty": "Dr. Jane Smith"
+      },
+      "preferredLabs": [],
+      "eligibleForLab": true,
+      "status": "PENDING"
+    }
+  ],
+  "labs": [
+    {
+      "id": "2",
+      "name": "Robotics Lab",
+      "description": "Advanced Robotics Research",
+      "faculty": "Dr. Jane Smith"
+    },
+    {
+      "id": "3",
+      "name": "AI Lab",
+      "description": "Artificial Intelligence Research",
+      "faculty": "Dr. John Doe"
+    },
+    {
+      "id": "4",
+      "name": "AR vR Lab",
+      "description": "Artificial Intelligence Research",
+      "faculty": "Dr. John Doe"
+    },
+    {
+      "id": "5",
+      "name": "Comedt Lab",
+      "description": "Artificial Intelligence Research",
+      "faculty": "Dr. John Doe"
+    },
+    {
+      "id": "6",
+      "name": "Varman Lab",
+      "description": "Artificial Intelligence Research",
+      "faculty": "Dr. John Doe"
+    },
+    {
+      "id": "7",
+      "name": "Jobi Lab",
+      "description": "Artificial Intelligence Research",
+      "faculty": "Dr. John Doe"
+    }
+  ],
+  "userData": {
+    "userType": "admin",
+    "userId": 8
+  }
+}

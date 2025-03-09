@@ -1,24 +1,24 @@
 import React from "react";
-import { Outlet } from "react-router-dom"; // Outlet for nested routes
+import { Outlet } from "react-router-dom";
 import Sidebar from "./Nav/Sidebar.js";
-import { useLocation } from "react-router-dom"; // To check current route
+import "../Components/assets/layout.css";
 
-import './assets/layout.css';
-
+// ✅ Fetch user role from localStorage inside Layout itself
 const Layout = () => {
-    const location = useLocation();
-    
-    // Hide sidebar on the home page
-    const showSidebar = location.pathname !== "/";
 
-    return (
-      <div className="layout">
-        {showSidebar && <Sidebar />}
-        <div className="content">
-          <Outlet /> {/* This is where Admin, Labs, User pages will render */}
-        </div>
+  const userRole = localStorage.getItem("userType") // ✅ Directly get the userType value
+  // Default to admin if no user found
+
+  const showSidebar = userRole === "admin" || userRole === "student"; // Show sidebar for admin/student
+
+  return (
+    <div className="layout">
+      {showSidebar && <Sidebar userRole={userRole} />} {/* ✅ Pass correct role */}
+      <div className="content">
+        <Outlet />
       </div>
-    );
+    </div>
+  );
 };
 
 export default Layout;
