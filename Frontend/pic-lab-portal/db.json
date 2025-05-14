@@ -1,0 +1,495 @@
+{
+  "students": [
+    {
+      "id": "7376211MC129",
+      "name": "Ravi",
+      "email": "ravi@example.com",
+      "year": 2,
+      "department": "MTRS",
+      "lab": {
+        "id": 2,
+        "name": "Robotics Lab",
+        "description": "Advanced Robotics Research",
+        "faculty": "Dr. Jane Smith"
+      },
+      "preferredLabs": [
+        2,
+        3,
+        4,
+        13,
+        12
+      ],
+      "eligibleForLab": true,
+      "status": "APPROVED"
+    },
+    {
+      "id": "7376211AE113",
+      "name": "sanju",
+      "email": "kaiji@google.com",
+      "year": 2,
+      "department": "AE",
+      "lab": null,
+      "preferredLabs": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "eligibleForLab": true,
+      "status": "PENDING",
+      "currentLabIndex": 3
+    }
+  ],
+  "labs": [
+    {
+      "id": "1",
+      "name": "Robotics Lab",
+      "description": "Advanced Robotics Research",
+      "faculty": "Dr. Jane Smith",
+      "indsPartner":"dominik"
+    },
+    {
+      "id": "2",
+      "name": "AI Lab",
+      "description": "Artificial Intelligence Research",
+      "faculty": "Dr. John Doe",
+      "indsPartner":"dimmi"
+    },
+    {
+      "id": "3",
+      "name": "AR vR Lab",
+      "description": "Artificial Intelligence Research",
+      "faculty": "pikka",
+      "indsPartner":"damma"
+    },
+    {
+      "id": "4",
+      "name": "Comedt Lab",
+      "description": "Artificial Intelligence Research",
+      "faculty": "dollu",
+      "indsPartner":"mallu"
+    },
+    {
+      "id": "5",
+      "name": "Varman Lab",
+      "description": "Artificial Intelligence Research",
+      "faculty": "jollu",
+      "indsPartner":"kallu"
+    },
+    {
+      "id": "6",
+      "name": "Jobi Lab",
+      "description": "Artificial Intelligence Research",
+      "faculty": "maki",
+      "indsPartner":"nakama"
+    }
+  ],
+  "faculty": [
+    {
+      "id": "MC002",
+      "name": "susan",
+      "email": "susan.davis@example.com",
+      "dept": "MTRS",
+      "labId": 2,
+      "labName": "Robotics Lab"
+    }
+  ],
+  "indsPartner":[
+    { 
+    "id": "DJ555", 
+    "name": "Godwin", 
+    "email": "godwin@gmail.com", 
+    "labId": 4, 
+    "labName": "erec" 
+    }, 
+    { 
+    "id": "DJ558", 
+    "name": "God", 
+    "email": "god@gmail.com", 
+    "labId": 4, 
+    "labName": "erec" 
+    }
+  ],
+  "requests": [
+    {
+      "id": "7376211AE113",
+      "name": "sanju",
+      "email": "kaiji@google.com",
+      "year": 2,
+      "department": "AE",
+      "lab": null,
+      "preferredLabs": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "eligibleForLab": true,
+      "status": "PENDING",
+      "currentLabIndex": 3
+    }
+  ],
+  "changeLab": [
+    {
+      "requestId": 1,
+      "studentId": "7376211Ae113",
+      "studentName": "Sanjay ",
+      "currentLabName": "Artificial Intell",
+      "desiredLabName": "Jobi lab",
+      "approvedByCurrentFaculty": false,
+      "approvedByDesiredFaculty": false,
+      "status": "PENDING",
+      "facultyRole": "DESIRED_FACULTY",
+      "id": "43ac"
+    },
+    {
+      "requestId": 2,
+      "studentId": "MC129",
+      "studentName": "Ravi ",
+      "currentLabName": "Artificial Intell",
+      "desiredLabName": "AR vR lab",
+      "approvedByCurrentFaculty": false,
+      "approvedByDesiredFaculty": false,
+      "status": "PENDING",
+      "facultyRole": "DESIRED_FACULTY",
+      "id": "24e4"
+    }
+  ],
+  "attendance": [
+    {
+      "id": "34",
+      "student": {
+        "id": "7376211MC125",
+        "name": "Sathy Bal",
+        "email": "balan@gmail.cpm",
+        "year": 4,
+        "department": "MTRS",
+        "preferredLabs": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "currentLabIndex": 1,
+        "eligibleForLab": true,
+        "status": "APPROVED"
+      },
+      "date": "2025-03-13",
+      "forenoonStatus": false,
+      "afternoonStatus": false,
+      "present": false
+    },
+    {
+      "id": "35",
+      "student": {
+        "id": "7376211MC129",
+        "name": "Varma",
+        "email": "bvaralan@gmail.cpm",
+        "year": 4,
+        "department": "MTRS",
+        "preferredLabs": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "currentLabIndex": 1,
+        "eligibleForLab": true,
+        "status": "APPROVED"
+      },
+      "date": "2025-03-13",
+      "forenoonStatus": false,
+      "afternoonStatus": false,
+      "present": false
+    },
+    {
+      "id": "36",
+      "student": {
+        "id": "7376211MC113",
+        "name": "santhosh",
+        "email": "sandy@gmail.cpm",
+        "year": 4,
+        "department": "MTRS",
+        "preferredLabs": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "currentLabIndex": 1,
+        "eligibleForLab": true,
+        "status": "APPROVED"
+      },
+      "date": "2025-03-13",
+      "forenoonStatus": false,
+      "afternoonStatus": false,
+      "present": false
+    },
+    {
+      "id": "37",
+      "student": {
+        "id": "7376211MC149",
+        "name": "Praveen",
+        "email": "praveen@gmail.cpm",
+        "year": 4,
+        "department": "MTRS",
+        "preferredLabs": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "currentLabIndex": 1,
+        "eligibleForLab": true,
+        "status": "APPROVED"
+      },
+      "date": "2025-03-13",
+      "forenoonStatus": false,
+      "afternoonStatus": false,
+      "present": false
+    }
+  ],
+  "attendanceDetails": [
+    {
+      "id": "7376211MC129",
+      "name": "Ravi Varma",
+      "status": "PRESENT",
+      "forenoonStatus": false,
+      "afternoonStatus": true
+    },
+    {
+      "id": "7376211Ae113",
+      "name": "Sanju",
+      "status": "PRESENT",
+      "forenoonStatus": true,
+      "afternoonStatus": true
+    }
+  ],
+  "registerAttendance": [
+    {
+      "id": "7a0c",
+      "student": {
+        "id": "7376211MC125"
+      },
+      "date": "2025-03-14",
+      "forenoonStatus": true,
+      "afternoonStatus": false
+    },
+    {
+      "id": "3f62",
+      "student": {
+        "id": "7376211MC129"
+      },
+      "date": "2025-03-14",
+      "forenoonStatus": true,
+      "afternoonStatus": false
+    },
+    {
+      "id": "7512",
+      "student": {
+        "id": "7376211MC113"
+      },
+      "date": "2025-03-14",
+      "forenoonStatus": true,
+      "afternoonStatus": false
+    },
+    {
+      "id": "b5a7",
+      "student": {
+        "id": "7376211MC149"
+      },
+      "date": "2025-03-14",
+      "forenoonStatus": true,
+      "afternoonStatus": false
+    },
+    {
+      "id": "76d2",
+      "student": {
+        "id": "7376211MC125"
+      },
+      "date": "2025-03-14",
+      "forenoonStatus": true,
+      "afternoonStatus": true
+    },
+    {
+      "id": "2623",
+      "student": {
+        "id": "7376211MC129"
+      },
+      "date": "2025-03-14",
+      "forenoonStatus": true,
+      "afternoonStatus": true
+    },
+    {
+      "id": "be6c",
+      "student": {
+        "id": "7376211MC113"
+      },
+      "date": "2025-03-14",
+      "forenoonStatus": true,
+      "afternoonStatus": true
+    },
+    {
+      "id": "18b8",
+      "student": {
+        "id": "7376211MC149"
+      },
+      "date": "2025-03-14",
+      "forenoonStatus": true,
+      "afternoonStatus": true
+    },
+    {
+      "id": "b478",
+      "student": {
+        "id": "7376211MC129"
+      },
+      "date": "2025-03-14",
+      "forenoonStatus": false,
+      "afternoonStatus": true
+    }
+  ],
+  "labChangeReqDetails": {
+    "requestId": 2,
+    "studentId": "7376211MC129",
+    "studentName": "Ravi",
+    "currentLabName": "FTFDDsdfd",
+    "desiredLabName": "mndas cfmdn",
+    "approvedByCurrentFaculty": true,
+    "approvedByDesiredFaculty": false,
+    "status": "REJECTED",
+    "facultyRole": "UNKNOWN"
+  },
+  "testing": [
+    {
+      "id": "d81d",
+      "title": "ROS training",
+      "startDate": "2025-03-14",
+      "endDate": "2025-03-31",
+      "year": 2
+    },
+    {
+      "id": "c776",
+      "title": "Web Dev workshop",
+      "startDate": "2025-03-19",
+      "endDate": "2025-03-20",
+      "year": 1
+    },
+    {
+      "id": "201a",
+      "title": "MATLab training",
+      "startDate": "2025-03-07",
+      "endDate": "2025-03-27",
+      "year": 3
+    }
+  ],
+  "userData": {
+    "userType": "admin",
+    "id": "MC002"
+  },
+  "topic": [
+    {
+      "id": "1",
+      "name": "Technology"
+    },
+    {
+      "id": "2",
+      "name": "BINgo"
+    },
+    {
+      "id": "3",
+      "name": "Jingo"
+    }
+  ],
+  "allPost": [
+    {
+      "id": "1",
+      "title": "Latest AI Trends",
+      "content": "AI is evolving rapidly!",
+      "createdAt": "2025-03-17T14:30:00",
+      "authorId": "MC005",
+      "authorName": "susan",
+      "authorType": "faculty"
+    },
+    {
+      "id": "2",
+      "title": "ksjdhvksdbv",
+      "content": "Aiskbdfkjsbdv",
+      "createdAt": "2025-03-17T14:30:00",
+      "authorId": "MC005",
+      "authorName": "susan",
+      "authorType": "faculty"
+    },
+    {
+      "id": "a816",
+      "title": "jobilinb",
+      "content": "jhbdfjsd f",
+      "createdAt": "2025-03-20T18:30:26.333Z",
+      "indsPartner": {
+        "id": "MC002"
+      },
+      "category": {
+        "id": "1"
+      }
+    },
+    {
+      "id": "7be1",
+      "title": "ihgsdv",
+      "content": "sdvsdv",
+      "indsPartner": {
+        "id": "MC002"
+      },
+      "category": {
+        "id": "1"
+      }
+    }
+  ],
+  "comment": [
+    {
+      "id": "1",
+      "content": "Great insights!",
+      "createdAt": "2025-03-17T17:00:00",
+      "authorId": "MC005",
+      "authorName": "susan",
+      "authorType": "faculty"
+    },
+    {
+      "id": "2",
+      "content": "KOmedy!",
+      "createdAt": "2025-03-17T17:00:00",
+      "authorId": "MC005",
+      "authorName": "susan",
+      "authorType": "faculty"
+    },
+    {
+      "id": "09f0",
+      "post": {
+        "id": 1
+      },
+      "content": "pimibilikka",
+      "createdAt": "2025-03-20T18:28:00.234Z",
+      "indsPartner": {
+        "id": "MC002"
+      }
+    },
+    {
+      "id": "44d5",
+      "post": {
+        "id": 1
+      },
+      "content": "kdjsbksd",
+      "createdAt": "2025-03-20T19:47:51.465Z",
+      "indsPartner": {
+        "id": "MC002"
+      }
+    }
+  ],
+  "testDiscuss": [
+
+  ]
+}
