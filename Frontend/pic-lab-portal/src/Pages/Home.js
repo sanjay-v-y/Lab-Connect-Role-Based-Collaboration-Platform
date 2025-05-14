@@ -1,30 +1,29 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../Components/assets/home.css'; // Ensure you have styling for better UI
+import logo from "../Components/images/bit logo.png"; 
+import { BASE_URL } from '../config';
 
 const Home = ({ setRole }) => {
   const navigate = useNavigate();
 
   const handleGoogleSignIn = () => {
-    navigate("/login");
+    /* navigate("/login"); */
+    window.location.href = `${BASE_URL}/oauth2/authorization/google`; 
   };
 
   return (
     <div className="home-container">
-      <div className="home-card"> {/* Added specificity */}
-        <h1 className="home-title">Welcome to PIC Portal</h1>
-        <p className="home-description">Register and manage labs with ease.</p>
+      <div className="home-card">
+        <h2 className="welcome-text">Welcome Back!</h2>
+        <img src={logo} alt="BIT Logo" className="home-logo" loading="lazy" />
+        <h3 className="platform-title">PIC Services Platform</h3>
         <button type="button" onClick={handleGoogleSignIn} className="google-signin-btn">
-          Sign in with Google
+          Google Sign In
         </button>
-      </div>
 
-      {/* Navigation Links */}
-      <nav className="home-nav"> {/* Added class for better targeting */}
-        <Link to="/admin" className="home-link">Go to Admin</Link> <br />
-        <Link to="/labs" className="home-link">Go to Labs</Link> <br />
-        <Link to="/user" className="home-link">Go to User</Link>
-      </nav>
+        <p className="bottom-text">Sign in with your BIT account</p>
+      </div>
     </div>
   );
 };

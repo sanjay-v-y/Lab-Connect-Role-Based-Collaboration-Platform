@@ -1,61 +1,108 @@
-/* Home Page Container */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Full Page Styling */
 .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-  }
-  
-  /* Card Styling */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;  /* Ensures full height */
+  background-color: #e7e9eb;
+  padding: 10px; /* Prevents content overflow */
+}
+
+/* Card Styling */
+.home-card {
+  background: rgb(248, 245, 245);
+  padding: 2rem;
+  border-radius: 35px;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%; /* Responsive width */
+  max-width: 400px; /* Ensures it doesn’t get too big */
+  min-height: 400px; /* Prevents shrinking too much */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Welcome Text */
+.welcome-text {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  border-bottom: none !important; /* Forces removal */
+}
+
+/* Logo Styling */
+.home-logo {
+  width: 80%;
+  max-width: 250px;
+  margin-bottom: 1.5rem;
+}
+
+/* Platform Title */
+.platform-title {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+
+/* Google Sign-In Button */
+.google-signin-btn {
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+  max-width: 300px;
+}
+
+.google-signin-btn:hover {
+  background-color: #296fe1;
+}
+
+/* Bottom Text */
+.bottom-text {
+  font-size: 13px;
+  color: #888;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* 🔹 Media Queries for Smaller Screens */
+@media screen and (max-width: 600px) {
   .home-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    padding: 1.5rem;
+    width: 95%;
+    min-height: auto; /* Adjust height dynamically */
   }
-  
-  .home-title {
-    font-size: 24px;
-    color: #333;
+
+  .welcome-text {
+    font-size: 1.5rem;
   }
-  
-  .home-description {
-    font-size: 16px;
-    color: #666;
+
+  .platform-title {
+    font-size: 1rem;
   }
-  
-  /* Google Sign-In Button */
+
   .google-signin-btn {
-    background-color: #4285F4;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
+    font-size: 14px;
+    padding: 10px;
   }
-  
-  .google-signin-btn:hover {
-    background-color: #357ae8;
+
+  .bottom-text {
+    font-size: 12px;
   }
-  
-  /* Navigation Links */
-  .home-nav {
-    margin-top: 20px;
-  }
-  
-  .home-link {
-    color: #333;
-    text-decoration: none;
-    font-size: 16px;
-    margin-right: 10px;
-  }
-  
-  .home-link:hover {
-    text-decoration: underline;
-  }
-  
+}

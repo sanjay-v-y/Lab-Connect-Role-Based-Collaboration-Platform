@@ -1,0 +1,158 @@
+.faculty-dash-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .main-dash-content {
+    width: 100%;
+    max-width: 1200px;
+    background-color: white;
+  }
+  
+  .faculty-dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+  }
+
+  .faculty-dash-header h2{
+    border: none;
+  }
+  
+  .profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .user-name {
+    font-weight: bold;
+  }
+  
+.faculty-dash-details {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    margin-top: 3rem;
+    margin-bottom: 20px;
+    margin-left: 16rem;
+    margin-right: 22rem;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.3);
+    transition-duration: 250ms;
+  }
+
+.faculty-dash-details:hover {
+    box-shadow: 0px 8px 35px rgba(0, 0, 0, 0.5);
+  }
+  
+  .details-dash-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25000px, 20rem));
+    gap:15px;
+  }
+  
+  .details-dash-container p {
+    line-height: 1.2;
+  }
+
+  .faculty-dashboard-stats {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .stat-card {
+    flex: 1;
+    min-width: 230px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stat-card p{
+    font-size: 1.3rem;
+  }
+  
+  .stat-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+  }
+  
+  /* Color Adjustments for Faculty Dashboard */
+  .blue {
+    background: #2980b9; /* Darker Blue for Students Count */
+  }
+  
+  .green {
+    background: #27ae60; /* Dark Green for Present Students */
+  }
+  
+  .yellow {
+    background: #f39c12; /* Darker Yellow for Registration Requests */
+  }
+  
+  .red {
+    background: #c0392b; /* Dark Red for Lab Change Requests */
+  }
+  
+  .ongoing-events {
+    margin-top: 4rem;
+    margin-bottom:5rem;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .ongoing-events-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .ongoing-year {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .ongoing-year ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .ongoing-year li {
+    padding: 5px 0;
+  }
+  
+  .red-text {
+    color: #c0392b;
+    font-weight: bold;
+  }
+
+.user-type-inline {
+  color: grey;
+  font-size: 0.75em;
+  margin-left: 4px;
+}

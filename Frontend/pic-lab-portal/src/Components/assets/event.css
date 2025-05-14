@@ -1,0 +1,116 @@
+.event-page {
+    padding: 3rem 6rem 0 3rem;
+  }
+  
+  .add-event-btn {
+    background-color: #1274de;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .event-form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+  }
+  
+  .event-form h3 {
+    margin-bottom: 10px;
+  }
+  
+  .event-form label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .event-form input,
+  .event-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .submit-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+
+  .submit-btn:hover {
+    background: #179a35;
+  }
+
+  .event-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .event-table th, .event-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .event-table th {
+    background-color: #0370e4;
+    color: white;
+  }
+  
+  .event-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .edit-btn, .delete-btn, .save-btn {
+    border: none;
+    padding: 6px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .edit-btn {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .save-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .edit-icon, .delete-icon {
+    font-size: 20px; 
+    cursor: pointer;
+    margin: 0 10px; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.edit-icon {
+    color: green;
+}
+
+.edit-icon:hover {
+    transform: scale(1.2); 
+}
+
+.delete-icon {
+    color: red;
+}
+
+.delete-icon:hover {
+    transform: scale(1.2);
+}

@@ -1,7 +1,7 @@
 .sidebar {
     width: 250px;
     height: 100vh; /* Full height */
-    background-color: #47739f;
+    background-color: #2868b2/* #47739f */;
     color: white;
     position: fixed;
     left: 0;
@@ -9,12 +9,14 @@
     padding: 20px;
     display: flex;
     flex-direction: column; 
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     color:white;
+    border-bottom: none !important; /* Forces removal */
 }
 
 .sidebar ul {
@@ -43,12 +45,13 @@
 .logout-button {
   width: 100%;
   padding: 10px;
-  margin-top: 20px;
-  background-color: #47739f;  /* ✅ Default background - Blue */
+  margin-top: 2rem;
+  background-color: #2868b2;  /* ✅ Default background - Blue */
   color: rgb(255, 254, 254);              /* ✅ Default text color - Red */
   border: none;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 450;
   border-radius: 5px;
   text-align: left;        /* ✅ Align text to the left */
   transition: background-color 0.3s ease, color 0.3s ease; /* ✅ Smooth transition */

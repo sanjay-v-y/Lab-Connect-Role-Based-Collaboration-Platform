@@ -1,5 +1,5 @@
 .labs-container {
-    padding: 20px;
+  padding: 2rem 0 0 0;
 }
   
 .top-buttons {
@@ -10,7 +10,7 @@
   
 button {
     padding: 10px 15px;
-    background: #47739f;
+    background: #0370e4;
     color: white;
     border: none;
     cursor: pointer;
@@ -18,11 +18,11 @@ button {
 }
   
 button:hover {
-    background: #345678;
+    background: #033c75;
 }
 
 .btn{
-    background: #47739f;
+    background: #0370e4;
 }
   
 .lab-form {
@@ -44,7 +44,7 @@ button:hover {
 }
   
 .labs-table th {
-    background: #47739f;
+    background: #0370e4;
     color: white;
 }
 
@@ -81,13 +81,148 @@ button:hover {
 }
 
 .faculty-dropdown li button {
-    all: unset; /* Reset all button styles */
+  all: unset; /* Reset all button styles */
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: 8px;
+  background: none; /* Ensure no background color */
+  border: none; /* Remove any border */
+  color: inherit; /* Inherit text color */
+  font: inherit; /* Ensure it follows parent styles */
+}
+
+
+.faculty-dropdown li button:hover {
+  background-color: #f0f0f0; /* Add hover effect */
+}
+
+.edit-icon, .delete-icon {
+    font-size: 20px; 
     cursor: pointer;
+    margin: 0 10px; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.edit-icon {
+    color: green;
+}
+
+.edit-icon:hover {
+    transform: scale(1.2); 
+}
+
+.delete-icon {
+    color: red;
+}
+
+.delete-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Overlay Background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Form Container */
+  .form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+  }
+  
+  /* Form Header */
+  .form-container h3 {
+    margin-bottom: 15px;
+  }
+  
+  /* Labels */
+  .form-container label {
     display: block;
     text-align: left;
-    padding: 8px;
-}
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Inputs & Dropdowns */
+  .form-container input,
+  .form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Dropdown Container */
+  .dropdown-container {
+    position: relative;
+  }
+  
+  /* Dropdown List */
+  .dropdown {
+    position: absolute;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+  }
+  
+  .dropdown li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown li:hover {
+    background: #f1f1f1;
+  }
+  
+  /* Buttons */
+  .form-container button {
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Submit Button */
+  .form-container .submit-btn {
+    background: #007bff;
+    color: white;
+  }
+  
+  .form-container .submit-btn:hover {
+    background: #0056b3;
+  }
+  
+  /* Cancel Button */
+  .form-container .cancel-btn {
+    background: #ccc;
+    color: black;
+  }
+  
+  .form-container .cancel-btn:hover {
+    background: #999;
+  }
+  
 
   
   

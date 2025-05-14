@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "./config.js"; 
 
 const defaultHeaders = {
     "Content-Type": "application/json",
@@ -9,28 +10,36 @@ const defaultHeaders = {
 export const Login = () => {
     const navigate = useNavigate();
 
-    const url = "https://3001-2409-408d-29c-e42d-d79-643a-f089-d997.ngrok-free.app";
-
     useEffect(() => {
         const handleLogin = async () => {
             try {
-                const response = await fetch(`${url}/pic/getuser`, {
+                const response = await fetch(/* "http://localhost:5000/userData" *//* `${BASE_URL}/pic/getuser` */
+                `${BASE_URL}/login/success`, {
+                    method:"GET",
                     headers: defaultHeaders,
+                    credentials:"include",
                   }); // Replace with actual API
+
+                console.log(response)
                 const data = await response.json();
 
                 console.log(data)
 
                 if (data) {
-                    const { userType, userId } = data;
+                    const { userType, id, profilePic, userName } = data;
 
                     // Store user ID & Type in localStorage
-                    localStorage.setItem("userId", userId);
+                    localStorage.setItem("userId", id);
                     localStorage.setItem("userType", userType);
+                    localStorage.setItem("profilePic", profilePic);
+                    localStorage.setItem("userName", userName);
 
                     // Navigate based on user type
                     console.log(userType);
-                    console.log(userId);
+                    console.log(id);
+                    console.log(profilePic);
+                    console.log(userName);
+
                     if (userType === "admin") {
                         navigate("/admin");
                     } else if (userType === "student") {
@@ -38,7 +47,7 @@ export const Login = () => {
                     } else if (userType === "faculty") {
                         navigate("/faculty");
                     } else {
-                        navigate("/industry");
+                        navigate("/indsPartner");
                     }
                 }
             } catch (error) {

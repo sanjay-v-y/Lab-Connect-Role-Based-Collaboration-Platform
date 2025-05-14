@@ -1,0 +1,413 @@
+.student-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.student-content {
+    flex: 1;
+    max-width: 900px;
+    margin-left: 2rem;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+strong {
+    color: #222;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 20px;
+    color: #222;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.lab-card-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 3rem;
+    margin-left:1rem;
+    margin-right:15rem;
+}
+
+.lab-card-container p {
+    margin: 6px 0;
+    line-height: 1.7;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.register-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top:2rem;
+}
+
+.register-container label {
+    display: block;
+    margin-top: 15px;  /* Space above each label */
+    font-weight: 500;
+}
+
+.register-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    margin-top: 5px;  /* Space below the label */
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #1e7e34;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.lab-dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    top: 100%; /* Align dropdown right below input */
+    left: 0;
+    width: 100%; /* Same width as input */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    cursor: pointer;
+
+    /* Hide scrollbar for Chrome, Safari and Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.lab-dropdown::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+.lab-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lab-dropdown li:hover {
+    background: #f0f0f0;
+}
+
+.lab-dropdown button {
+    all: unset; /* Remove default button styles */
+    width: 100%;
+    text-align: left;
+    display: block;
+    font-size: 16px;
+    padding: 5px 10px;
+    color: #333;
+    cursor: pointer;
+}
+
+.lab-dropdown button:hover {
+    background: #f0f0f0;
+}
+
+.lab-selection-container {
+    position: relative;  /* Ensure dropdown is positioned relative to this container */
+}
+
+.lab-status-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.lab-status-card {
+    background-color: #f9f9f9;
+    border-left: 6px solid gray;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.lab-status-card p {
+    margin: 5px 0;
+}
+
+/* ✅ Colors based on status */
+.lab-status-card.approved {
+    border-left-color: #4CAF50; /* Green */
+    background-color: #e6f4ea;
+}
+
+.lab-status-card.pending {
+    border-left-color: #FF9800; /* Orange */
+    background-color: #fff3e0;
+}
+
+.lab-status-card.rejected {
+    border-left-color: #F44336; /* Red */
+    background-color: #ffebee;
+}
+
+.student-title {
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.student-info {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-size: 22px;
+    color: #222;
+    border: none;
+    padding-bottom: 5px;
+}
+
+.request-btn {
+    background-color: #ff9800;
+    margin-top: 15px;
+}
+
+.request-btn:hover {
+    background-color: #e68900;
+}
+
+.attendance-container {
+    margin-top: 30px;
+    background: white;
+    padding: 5px 20px 5px 20px;
+    margin-left:1rem;
+    margin-right:15rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.attendance-date {
+    font-size: 16px;
+    color: #555;
+    margin-bottom:1rem;
+}
+
+.attendance-card {
+    border-radius: 15px;
+    padding:0.5rem 1rem 1rem 3rem;
+}
+
+.attendance-card p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.attendance-card p:nth-of-type(2) strong,
+.attendance-card p:nth-of-type(3) strong {
+  font-weight: 500; /* Slightly lighter bold */
+}
+
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.status.present {
+    color: #28a745;
+}
+
+.status.absent {
+    color: #dc3545;
+}
+
+.status.present-half-day {
+    color: #ffc107;
+}
+
+.status.present-full-day {
+    color: green;
+}
+
+.lab-change-status {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.lab-change-status h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.lab-change-status p {
+    font-size: 1em;
+    margin: 5px 0;
+    line-height: 2;
+}
+
+.lab-change-status p strong {
+    font-weight: 500; /* Slightly reduced from bold */
+    font-size: 0.95rem; /* Slightly smaller font size */
+  }
+  
+
+.approved {
+    color: green;
+    font-weight: bold;
+}
+
+.pending {
+    color: orange;
+    font-weight: bold;
+}
+
+.rejected {
+    color: red;
+    font-weight: bold;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .lab-change-container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+  }
+  
+  .lab-change-container h3 {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .lab-selection-container input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .lab-dropdown li button {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .lab-dropdown li button:hover {
+    background-color: #f2f2f2;
+  }
+
+  .submit-btn,
+.cancel-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+

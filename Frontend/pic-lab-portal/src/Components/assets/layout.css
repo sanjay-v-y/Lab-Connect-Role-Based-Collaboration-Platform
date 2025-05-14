@@ -6,6 +6,5 @@
 .content {
     flex-grow: 1; /* Takes remaining space */
     margin-left: 250px; /* Push content to the right */
-    padding: 20px;
     overflow-x: hidden;
 }

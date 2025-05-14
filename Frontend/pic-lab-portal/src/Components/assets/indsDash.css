@@ -1,0 +1,174 @@
+/* Use the same main content styling as the admin */
+.content {
+    flex: 1;
+    padding: 2rem 7rem 0 4rem;
+    background: white;
+}
+
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.welcome-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.user-type {
+    font-size: 14px;
+    color: gray;
+    margin-top: 5px;
+}
+
+/* Industry Person Info */
+.industry-info {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.industry-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Lab Details Card */
+.lab-details-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.lab-details-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.lab-details-card p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* No Lab Message */
+.no-lab-message {
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+/* Container for industry person dashboard */
+.inds-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Main content area */
+  .inds-content {
+    flex: 1;
+    padding: 2rem 23rem 0 14rem;
+    background: white;
+  }
+  
+  /* Welcome Section */
+  .inds-welcome-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    border-radius: 17px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .inds-profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .inds-welcome-section h2 {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .inds-user-type {
+    font-size: 15px;
+    color: gray;
+    margin-top: 5px;
+  }
+  
+  /* Industry Person Info */
+  .inds-info {
+    background: white;
+    border-radius: 17px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .inds-info p {
+    font-size: 15px;
+    margin: 5px 0;
+    line-height: 2;
+  }
+  
+  /* Lab Details Card */
+  .inds-lab-card {
+    background: #f8f9fa;
+    border-radius: 17px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .inds-lab-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #007bff;
+  }
+  
+  .inds-lab-card p {
+    font-size: 15px;
+    margin: 5px 0;
+    line-height: 2.5;
+  }
+  
+  /* No Lab Message */
+  .inds-no-lab-message {
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+  

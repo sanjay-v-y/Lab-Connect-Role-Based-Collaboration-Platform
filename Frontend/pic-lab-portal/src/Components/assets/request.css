@@ -1,0 +1,233 @@
+/* request.css */
+
+/* Style for the main request container */
+.faculty-content {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  .faculty-content h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Request List */
+  .request-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Each Request Item */
+  .request-item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Text inside request item */
+  .request-item p {
+    margin-bottom: 2rem;
+    color: #444;
+  }
+  
+  /* Buttons */
+  .accept-btn,
+  .reject-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .accept-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .reject-btn {
+    background-color: #dc3545;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .accept-btn:hover {
+    background-color: #218838;
+  }
+  
+  .reject-btn:hover {
+    background-color: #c82333;
+  }
+
+  /* Overall container is fine */
+.faculty-content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* Section wrapper */
+.request-section {
+  margin-bottom: 5rem;
+}
+
+/* Headings */
+.request-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: left;
+  border:none;
+}
+
+/* Box around the requests */
+.request-box {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* No requests text */
+.no-request {
+  text-align: center;
+  color: #888;
+}
+
+/* Optional: a divider for inside the CardComp if needed */
+.lab-change-flow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.lab-from,
+.lab-to {
+  padding: 6px 12px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  font-weight: 500;
+  color: #444;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.request-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* Expanded card styling */
+.request-card.expanded {
+  padding-bottom: 20px;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.request-details {
+  flex: 1;
+  padding: 15px;
+}
+
+.student-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.lab-name {
+  color: gray;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons Container - Prevents shifting when expanded */
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  min-width: 230px;
+}
+
+.approve-btn, .reject-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.approve-btn {
+  background: #28a745;
+  color: white;
+}
+
+.reject-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.approve-btn:hover {
+  background: #218838;
+}
+
+.reject-btn:hover {
+  background: #931623;
+}
+
+/* Expanded section styling */
+.extra-details {
+  width: 100%;
+  background: #f8f9fa;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  border-left: 4px solid #007bff;
+}
+
+.roll-no {
+  font-size: 0.85rem;
+  color: gray;
+  margin-left: 5px;
+}
+
+
+  
+  

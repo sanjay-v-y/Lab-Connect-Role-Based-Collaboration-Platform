@@ -1,0 +1,94 @@
+.request-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  /* Expanded card styling */
+  .request-card.expanded {
+    padding-bottom: 20px;
+  }
+  
+  .toggle-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .request-details {
+    flex: 1;
+    padding: 0 15px;
+  }
+  
+  .student-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .lab-name {
+    color: gray;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Buttons Container - Prevents shifting when expanded */
+  .action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    min-width: 140px;
+  }
+  
+  .approve-btn, .reject-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .approve-btn {
+    background: #28a745;
+    color: white;
+  }
+  
+  .reject-btn {
+    background: #dc3545;
+    color: white;
+  }
+  
+  .approve-btn:hover {
+    background: #218838;
+  }
+  
+  .reject-btn:hover {
+    background: #c82333;
+  }
+  
+  /* Expanded section styling */
+  .extra-details {
+    width: 100%;
+    background: #f8f9fa;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border-left: 4px solid #007bff;
+  }
+  

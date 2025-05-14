@@ -1,0 +1,145 @@
+
+.session-selection {
+    margin-bottom: 15px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 8px 12px 8px 35px; /* extra left-padding for icon */
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+.attendance-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: 5rem;
+}
+
+.attendance-table th{
+    background-color: #1e6dc2;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.attendance-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Default (Absent) Row */
+.absent-row {
+    background-color: #ffcccc !important;  /* Force red background */
+}
+
+/* Full Present Row */
+.present-row {
+    background-color: #b2f7b2 !important;  /* Force green background */
+}
+
+/* Half Present FN */
+.half-present-fn {
+    background: linear-gradient(to right, #b2f7b2 40%, #ffcccc 50%) !important;
+}
+
+/* Half Present AN */
+.half-present-an {
+    background: linear-gradient(to right, #ffcccc 40%, #b2f7b2 50%) !important;
+}
+
+/* 🔥 Fix: Prevent hover from overriding background */
+.attendance-table tr:hover.absent-row {
+    background-color: #ffcccc !important;
+  }
+  
+    .attendance-table tr:hover.present-row {
+    background-color: #b2f7b2 !important;
+    }
+  
+  .attendance-table tr:hover.half-present-fn {
+    background: linear-gradient(to right, #b2f7b2 40%, #ffcccc 50%) !important;
+  }
+  
+  .attendance-table tr:hover.half-present-an {
+    background: linear-gradient(to right, #ffcccc 40%, #b2f7b2 50%) !important;
+  }
+
+/* Present Button */
+.present-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.present-btn:hover {
+    background-color: darkgreen;
+}
+
+/* Absent Button */
+.absent-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.absent-btn:hover {
+    background-color: darkred;
+}
+
+.top-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    margin-left: 8rem;
+    margin-right: 14rem;
+    margin-top:4rem;
+  }
+  
+  .session-selection-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .session-selection-inline label{
+    font-size: 1.1rem;
+  }
+  
+  .session-selection-inline select {
+    padding: 7px;
+    font-size: 14px;
+    min-width: 140px;
+    border-radius: 50px;
+    margin-bottom: 5px;
+  }
+  
+  /* Search with Icon */
+  .search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 16px;
+    color: grey;
+    pointer-events: none; /* so clicks go to input */
+  }

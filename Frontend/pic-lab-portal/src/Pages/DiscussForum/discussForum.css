@@ -1,0 +1,628 @@
+/* Forum Layout */
+.forum-container {
+    display: flex;
+    height: 100vh;
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.forum-content {
+    flex: 1;
+    padding: 1.5rem 6rem 0 3rem;
+    max-width: 75rem;
+    background: white;
+}
+
+.forum-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border:none;
+}
+
+/* Labs Section */
+.labs-list {
+    display: flex;
+    flex-wrap: wrap; /* Arrange in rows */
+    justify-content: center; /* Center align */
+    gap: 50px; /* Space between cards */
+    margin-top: 5rem;
+}
+
+/* Topics Section */
+.topics-list {
+    margin-top:5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap;
+    gap: 12px;
+    text-align: center; /* Center text inside items */
+}
+
+/* Lab Item - Square Card */
+.lab-item {
+    background: rgb(253, 252, 252);
+    width: 175px; /* Fixed width */
+    height: 175px; /* Fixed height */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    cursor: pointer;
+    font-size: 18px; /* Bigger text */
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.topic-item {
+    background: white;
+    padding: 16px 24px; /* Increase padding */
+    border-radius: 12px; /* Slightly more rounded */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    cursor: pointer;
+    font-size: 18px; /* Slightly bigger font */
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.lab-item:hover {
+    color:white;
+    background-color: #0466cf;
+    transform: scale(1.05); /* Slightly bigger on hover */
+}
+
+.topic-item:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Posts Section */
+.posts-list {
+    margin-top: 20px;
+}
+
+.create-topic-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .create-topic-btn:hover {
+    background: #0056b3;
+  }
+  
+  .edit-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background: #ff9800;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-btn:hover {
+    background: #e68900;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* Post Card */
+.post-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+}
+
+.post-title {
+    margin-left:28px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.post-content {
+    margin-left:2.5rem;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+}
+
+
+.profile-pic {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ddd; /* Placeholder color */
+    display: block;
+    margin-right: 8px;
+    object-fit: scale-down;
+  }
+  
+  .time-ago {
+    margin-left:1rem;
+    font-size: 12px;
+    color: #888;
+  }
+
+/* Post Header */
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Post Dropdown (⋮ Menu) */
+.post-options {
+    position: relative;
+}
+
+.post-menu {
+    color: black; /* Change the icon color to black */
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+}
+
+/* ✅ Fix Dropdown Position & Width */
+.post-dropdown {
+    position: absolute;
+    right: 10px; /* Align dropdown with the button */
+    top: 35px; /* Position it below the menu button */
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: fit-content; /* Only as wide as the text */
+    min-width: 80px; /* Prevent it from shrinking too much */
+    padding: 5px 0;
+    border-radius: 4px;
+}
+
+/* ✅ Fix Dropdown Button Styles */
+.post-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+    text-align: left;
+}
+
+.post-dropdown button:hover {
+    background: #f0f0f0;
+}
+
+/* Comments Section */
+.comments-section {
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.comment-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.comment-bar:hover {
+    background: #e0e0e0;
+}
+
+/* Expanded Comments */
+.comments-container {
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Individual Comment */
+.comment-item {
+    display: flex;
+    justify-content: space-between; /* Pushes time to the right */
+    align-items: center;
+    padding: 8px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.comment-user {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.comment-text {
+    margin-left:1rem;
+    cursor: pointer;
+    color: #333;
+    transition: background 0.2s;
+    flex-grow: 1; /* Ensures comment content takes up available space */
+    margin-right: 10px;
+}
+
+.comment-text:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* View Comments Button */
+.view-comments-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 1rem;
+}
+
+.view-comments-btn:hover {
+    color: white;
+}
+
+/* Post Form */
+.post-form {
+    margin-top: 2rem;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.post-form input,
+.post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Form Buttons */
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .form-container h3 {
+    margin-bottom: 15px;
+  }
+  
+  .form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-container button {
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .form-container button:first-of-type {
+    background: #007bff;
+    color: white;
+  }
+  
+  .form-container button:first-of-type:hover {
+    background: #0056b3;
+  }
+
+.post-cancel-btn {
+    background: #ccc;
+    color: #333;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-cancel-btn:hover {
+    background: red;
+    color: white;
+}
+
+/* Add Comment Input */
+.add-comment {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.add-comment input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.add-comment button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-comment button:hover {
+    background: #0056b3;
+}
+
+/* Comment Options (Edit/Delete) */
+.comment-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 10;
+}
+
+.comment-option {
+    border: none;
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: red;
+}
+
+.comment-option:hover {
+    text-decoration: underline;
+}
+
+.comment-item:hover .comment-options {
+    display: block;
+}
+
+
+.comment-dropdown {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+  }
+  
+  .comment-dropdown button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .comment-dropdown button:hover {
+    background: #f0f0f0;
+  }
+  
+  /* Style for the time display (aligned to the left) */
+  .comment-time {
+    font-size: 12px;
+    color: #888;
+    min-width: 60px; /* Adjust width as needed */
+    text-align: right;
+    white-space: nowrap; /* Prevents line break */
+  }
+  
+  /* Style for the comment content */
+  .comment-content {
+    flex: 1; /* Takes the remaining space */
+    margin-left: 10px; /* Creates space between time and comment */
+  }
+  
+  .popup-notification {
+    position: fixed;
+    top: 13%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    background-color: white; /* ✅ Green for success */
+    color: black;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeInOut 2s ease-in-out;
+  }
+  
+  /* ✅ Animation */
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, -60%); }
+    10% { opacity: 1; transform: translate(-50%, -50%); }
+    90% { opacity: 1; transform: translate(-50%, -50%); }
+    100% { opacity: 0; transform: translate(-50%, -40%); }
+  }
+  
+.edit-icon, .delete-icon{
+    font-size: 20px; 
+    cursor: pointer;
+    margin: 0 10px; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.edit-icon {
+    color: green;
+}
+
+.edit-icon:hover {
+    transform: scale(1.2); 
+    color: red;
+}
+  
+
+/* Overlay Background */
+.post-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  /* Form Container */
+  .post-form-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Form Elements */
+.post-form-container input,
+.post-form-container textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Make textarea taller */
+.post-form-container textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Buttons Row */
+.post-form-container .button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Individual Buttons */
+.post-form-container button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.context-menu {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .context-menu .edit-icon,
+  .context-menu .delete-icon {
+    cursor: pointer;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .context-menu .edit-icon:hover {
+    color: green;
+  }
+  
+  .context-menu .delete-icon:hover {
+    color: #e74c3c;
+  }
+  
+  .post-form-container h3{
+    margin-bottom: 1rem;
+  }
+  
