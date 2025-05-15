@@ -27,37 +27,37 @@
 ## 📸 UI Screenshots
 
 ### 🔐 Login Page
-![Login Page](./website images/image(1).png)
+![Login Page](./Website-Images/1.png)
 
 ---
 
 ### 📊 Dashboard Page
-![Dashboard](./website images/image(2).png)
+![Dashboard](./Website-Images/2.png)
 
 ---
 
 ### 🗓️ Attendance Page
-![Attendance](./website images/image(3).png)
+![Attendance](./Website-Images/3.png)
 
 ---
 
 ### 💬 Discuss Forum Page
-![Discuss Forum](./website images/image(4).png)
+![Discuss Forum](./Website-Images/4.png)
 
 ---
 
 ### 📝 Lab Register & Change Page (Student)
-![Lab Register](./website images/image(5).png)
+![Lab Register](./Website-Images/5.png)
 
 ---
 
 ### 📥 Requests Page (Faculty)
-![Requests Page](./website images/image(6).png)
+![Requests Page](./Website-Images/6.png)
 
 ---
 
 ### 🧾 Labs Page (Admin)
-![Labs Page](./website images/image(7).png)
+![Labs Page](./Website-Images/7.png)
 
 ---
 
@@ -67,10 +67,19 @@ This portal removes the hassle of manual lab registration and communication by o
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 
 **Sanjay** – Frontend Developer  
-ReactJS • UI/UX • Web Architecture • Problem Solving
+ReactJS • Web Architecture
+
+**Ravi Varma** – Backend Developer  
+Spring Boot • Database • Problem Solving
+
+**Sutharshan** – UI/UX  
+Figma • Canva 
+
+**Vijay Anand** – API handling  
+API • Ngrok
 
 ---
 
